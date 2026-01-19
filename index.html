@@ -29,8 +29,8 @@
     </head>
 
     <body class="2xl:px-8">
-        <div class="container mx-auto m-8 flex flex-row items-start gap-8 md:flex-row ">
-            <aside id="infoSidebar" class="w-[300px] bg-white rounded-xl p-6 gap-6 flex flex-col">
+        <div class="container mx-auto m-8 flex flex-col-reverse items-start gap-8 2xl:flex-row">
+            <aside id="infoSidebar" class="w-[300px] bg-white rounded-xl p-6 gap-6 flex-col hidden 2xl:flex">
                 <div id="userInfo" class="flex flex-col mx-auto pt-2 gap-5">
                     <figure class="mx-auto flex justify-center">
                         <img src="./assets/images/profile.jpg" alt="Nabil Fayez Profile Picture"
@@ -233,20 +233,45 @@
                     </a>
                 </div>
             </aside>
-            <main class="flex-grow">
-                <header class="bg-white rounded-xl p-6 mb-8 ">
-                    <h1 class="text-3xl font-bold mb-4">Welcome to My Portfolio</h1>
-                    <p class="mb-2">Explore my projects and skills.</p>
+            <main class="w-full 2xl:flex-grow flex flex-col gap-28">
+                <header class="bg-white rounded-xl flex flex-row">
+                    <div class="header-content flex flex-col gap-8 2xl:max-w-1/2 py-16 pl-16 items-start">
+                        <span class="heading flex flex-col gap-6 2xl:max-w-lg">
+                            <h1 class="font-semibold text-5xl leading-[56px] text-[#131313]">I design Softwares
+                                that delight and inspire people.</h1>
+                            <p class="opacity-60 font-normal text-lg">A passionate Frontend Developer
+                                specializing in creating beautiful and functional web experiences.</p>
+                        </span>
+                        <button class="flex flex-row items-center gap-6 py-1.5 pl-7 pr-1.5 bg-[#F78F42] rounded-full ">
+                            <span class="font-medium text-lg text-[#131313]">Let's Talk</span>
+                            <ion-icon name="arrow-forward-outline"
+                                class="rounded-full p-2.5 gap-2.5 bg-[#131313] text-[#F78F42]"></ion-icon>
+                        </button>
+                    </div>
+                    <div
+                        class="hero-img bg-[url('./assets/images/hero-img.png')] bg-no-repeat bg-contain bg-center flex-grow w-1/2">
+                        <span class="block"></span>
+                    </div>
                 </header>
+                <section class="flex flex-col gap-12">
+
+                </section>
             </main>
-            <nav class="w-[88px] h-[95vh] sticky top-8 bg-white rounded-xl p-5 gap-5 flex flex-col items-center ">
-                <button class="rounded-lg p-3 gap-2.5" id="themeButton" title="Toggle Dark/Light Theme">
-                    <ion-icon name="moon-outline" class="text-2xl text-[#F78F42]"></ion-icon>
-                </button>
-                <div class="flex flex-grow flex-col justify-around">
-                    <ul class="gap-8 flex flex-col items-center">
+            <nav
+                class="w-full 2xl:w-[88px] 2xl:h-[95vh] justify-between rounded-full sticky top-8 bg-white 2xl:rounded-xl 2xl:p-5 p-2 gap-5 flex flex-row-reverse items-center 2xl:flex-col ">
+                <div class="">
+                    <button type="button" class="rounded-lg p-3 gap-2.5" id="themeButton"
+                        title="Toggle Dark/Light Theme">
+                        <ion-icon name="moon-outline" class="text-2xl text-[#F78F42]"></ion-icon>
+                    </button>
+                    <button class="2xl:hidden rounded-lg p-3 gap-2.5" type="button" title="nav menu toggle button">
+                        <ion-icon name="menu-outline" class="text-2xl text-[#131313]"></ion-icon>
+                    </button>
+                </div>
+                <div class="hidden 2xl:flex 2xl:flex-grow flex-row justify-around 2xl:flex-col">
+                    <ul class="gap-8 flex flex-row items-center 2xl:flex-col">
                         <li class="flex flex-col gap-1">
-                            <div class="bg-[#EEEEEE] px-2 py-1 rounded-md">
+                            <div class="bg-[#EEEEEE] px-2 py-1 rounded-md hidden 2xl:inline-block">
                                 <span class="text-[#131313] font-medium text-xs">Home</span>
                             </div>
                             <a href="#projects"
@@ -292,11 +317,12 @@
                         </li>
                     </ul>
                 </div>
+                <div class="profile-avatar">
+                    <img src="./assets/images/profile.jpg" alt="Nabil Fayez Profile Picture"
+                        class="rounded-full mx-auto border-1 border-[#131313] w-12 2xl:hidden">
+                </div>
             </nav>
         </div>
-
-        <!-- The app content will be rendered here -->
-
         <!-- Scripts -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
