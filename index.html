@@ -24,13 +24,20 @@
                 height: 100vh;
                 background: #f1f1f1;
             }
+
+            *::-webkit-scrollbar,
+            *::-webkit-scrollbar-track,
+            *::-webkit-scrollbar-thumb,
+            *::-webkit-scrollbar-thumb:hover {
+                display: none;
+            }
         </style>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     </head>
 
-    <body class="2xl:px-8">
+    <body id="home" class="2xl:px-8 2xl:py-8 px-4 py-6">
         <div class="container mx-auto m-8 flex flex-col-reverse items-start gap-8 2xl:flex-row">
-            <aside id="infoSidebar" class="w-[300px] bg-white rounded-xl p-6 gap-6 flex-col hidden 2xl:flex">
+            <aside id="infoSidebar" class="max-w-[300px] bg-white rounded-xl p-6 gap-6 flex-col hidden 2xl:flex">
                 <div id="userInfo" class="flex flex-col mx-auto pt-2 gap-5">
                     <figure class="mx-auto flex justify-center">
                         <img src="./assets/images/profile.jpg" alt="Nabil Fayez Profile Picture"
@@ -233,7 +240,7 @@
                     </a>
                 </div>
             </aside>
-            <main class="w-full 2xl:flex-grow flex flex-col gap-28">
+            <main class="w-full 2xl:flex-grow flex flex-col lg:gap-28 sm:gap-24  gap-16">
                 <header class="bg-white rounded-xl flex flex-row">
                     <div class="header-content flex flex-col gap-8 2xl:max-w-1/2 py-16 pl-16 items-start">
                         <span class="heading flex flex-col gap-6 2xl:max-w-lg">
@@ -249,11 +256,11 @@
                         </button>
                     </div>
                     <div
-                        class="hero-img bg-[url('./assets/images/hero-img.png')] bg-no-repeat bg-contain bg-center flex-grow w-1/2">
+                        class="hero-img lg:bg-[url('./assets/images/hero-img.png')] bg-no-repeat bg-contain bg-center flex-grow w-1/2">
                         <span class="block"></span>
                     </div>
                 </header>
-                <section class="flex flex-col gap-12">
+                <section id="services" class="flex flex-col gap-12">
                     <div class="section-heading flex flex-col gap-4 w-5/12 mx-auto text-center">
                         <h2 class="font-bold text-4xl text-[#131313]">
                             My Services
@@ -450,7 +457,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="flex flex-col gap-12">
+                <section id="education" class="flex flex-col gap-12">
                     <div class="section-heading flex flex-col gap-4 w-5/12 mx-auto text-center">
                         <h2 class="font-bold text-4xl text-[#131313]">
                             Education
@@ -529,7 +536,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="flex flex-col gap-12">
+                <section id="experience" class="flex flex-col gap-12">
                     <div class="section-heading flex flex-col gap-4 w-5/12 mx-auto text-center">
                         <h2 class="font-bold text-4xl text-[#131313]">
                             Experience
@@ -606,7 +613,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="flex flex-col gap-12">
+                <section id="portfolio" class="flex flex-col gap-12">
                     <div class="section-heading flex flex-col gap-4 w-5/12 mx-auto text-center">
                         <h2 class="font-bold text-4xl text-[#131313]">
                             Portfolio
@@ -871,6 +878,185 @@
 
                     </div>
                 </section>
+                <section id="blogs" class="flex flex-col gap-12">
+                    <div class="section-heading flex flex-col gap-4 w-5/12 mx-auto text-center">
+                        <h2 class="font-bold text-4xl text-[#131313]">
+                            Latest Blogs
+                        </h2>
+                        <p class=" opacity-60 font-normal text-base ">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                            consequat duis enim velit mollit. lorem ipsum
+                        </p>
+                    </div>
+                    <div class="latest-blogs-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div
+                            class="latest-blog-item bg-white rounded-xl p-8 flex flex-col gap-2.5 hover:shadow-2xl transition-shadow duration-300">
+                            <div class="latest-blog-item-content flex flex-col gap-4">
+                                <img src="https://picsum.photos/200" alt="Latest Blog 1"
+                                    class="rounded-lg w-[75%] lg:w-full m-auto">
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="font-semibold text-xl text-[#131313]">E-commerce Website</h3>
+                                    <!-- actions -->
+                                    <div class="flex flex-col gap-4">
+                                        <div
+                                            class="flex flex-row gap-2 bg-[#F6F6F6] px-5 py-3 rounded-full items-center hover:bg-[#F78F42] hover:text-white transition-colors duration-300 cursor-pointer">
+                                            <h4 class="flex-grow font-normal text-base ">Read Full Article</h4>
+                                            <ion-icon name="arrow-forward-outline" class="text-2xl"></ion-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="latest-blog-item bg-white rounded-xl p-8 flex flex-col gap-2.5 hover:shadow-2xl transition-shadow duration-300">
+                            <div class="latest-blog-item-content flex flex-col gap-4">
+                                <img src="https://picsum.photos/200" alt="Latest Blog 1"
+                                    class="rounded-lg w-[75%] lg:w-full m-auto">
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="font-semibold text-xl text-[#131313]">E-commerce Website</h3>
+                                    <!-- actions -->
+                                    <div class="flex flex-col gap-4">
+                                        <div
+                                            class="flex flex-row gap-2 bg-[#F6F6F6] px-5 py-3 rounded-full items-center hover:bg-[#F78F42] hover:text-white transition-colors duration-300 cursor-pointer">
+                                            <h4 class="flex-grow font-normal text-base ">Read Full Article</h4>
+                                            <ion-icon name="arrow-forward-outline" class="text-2xl"></ion-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="latest-blog-item bg-white rounded-xl p-8 flex flex-col gap-2.5 hover:shadow-2xl transition-shadow duration-300">
+                            <div class="latest-blog-item-content flex flex-col gap-4">
+                                <img src="https://picsum.photos/200" alt="Latest Blog 1"
+                                    class="rounded-lg w-[75%] lg:w-full m-auto">
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="font-semibold text-xl text-[#131313]">E-commerce Website</h3>
+                                    <!-- actions -->
+                                    <div class="flex flex-col gap-4">
+                                        <div
+                                            class="flex flex-row gap-2 bg-[#F6F6F6] px-5 py-3 rounded-full items-center hover:bg-[#F78F42] hover:text-white transition-colors duration-300 cursor-pointer">
+                                            <h4 class="flex-grow font-normal text-base ">Read Full Article</h4>
+                                            <ion-icon name="arrow-forward-outline" class="text-2xl"></ion-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <section id="contact" class="flex flex-col gap-12">
+                    <div class="section-heading flex flex-col gap-4 w-5/12 mx-auto text-center">
+                        <h2 class="font-bold text-4xl text-[#131313]">
+                            Get In Touch
+                        </h2>
+                        <p class=" opacity-60 font-normal text-base ">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                            consequat duis enim velit mollit. lorem ipsum
+                        </p>
+                    </div>
+                    <div class="contact-section">
+                        <div class="flex md:flex-row flex-col gap-6">
+                            <form action="" class="flex flex-grow gap-2.5 p-10 rounded-xl bg-white">
+                                <div class="form-content w-full flex-col flex gap-6">
+                                    <h2 class="form-heading text-xl font-bold text-[#131313]">Leave a Message</h2>
+                                    <div class="form-body flex flex-col gap-5">
+                                        <div class="flex md:flex-row flex-col gap-6">
+                                            <div class="input-group flex gap-2.5 flex-col md:w-1/2">
+                                                <label for="name"
+                                                    class="font-normal text-sm text-[#131313] opacity-80">Name</label>
+                                                <input type="text" name="name" title="name" autocomplete="off"
+                                                    class="rounded-lg py-3 px-4 flex gap-2 bg-[#F6F6F6] focus:outline-[#F78F42]">
+                                            </div>
+                                            <div class="input-group flex gap-2.5 flex-col md:w-1/2">
+                                                <label for="email"
+                                                    class="font-normal text-sm text-[#131313] opacity-80">Email</label>
+                                                <input type="text" name="email" title="email"
+                                                    class="rounded-lg py-3 px-4 flex gap-2 bg-[#F6F6F6] focus:outline-[#F78F42]">
+                                            </div>
+                                        </div>
+                                        <div class="input-group flex gap-2.5 flex-col">
+                                            <label for="subject"
+                                                class="font-normal text-sm text-[#131313] opacity-80">Subject</label>
+                                            <input type="text" name="subject" title="subject" autocomplete="off"
+                                                class="rounded-lg py-3 px-4 flex gap-2 bg-[#F6F6F6] focus:outline-[#F78F42]">
+                                        </div>
+                                        <div class="input-group flex gap-2.5 flex-col">
+                                            <label for="message"
+                                                class="font-normal text-sm text-[#131313] opacity-80">Message</label>
+                                            <textarea type="text" name="message" title="message" autocomplete="off"
+                                                class="rounded-lg py-3 px-4 flex gap-2 bg-[#F6F6F6] focus:outline-[#F78F42] min-h-[150px]"></textarea>
+                                        </div>
+                                        <button type="submit"
+                                            class="bg-[#F78F42] py-3 px-5 rounded-lg gap-5 md:w-fit outline-none  cursor-pointer  font-medium text-base text-[#131313] hover:text-white transition-all">
+                                            Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="contact-info flex flex-col justify-between gap-6 min-w-1/3">
+                                <div class="info-card bg-white flex flex-col gap-6 p-6 rounded-xl">
+                                    <div
+                                        class="info-icon m-auto p-2.5 rounded-full bg-[#F78F42] text-[#131313] items-center min-w-[50px] min-h-[50px] flex justify-center">
+                                        <ion-icon name="map-outline" class="text-xl"></ion-icon>
+                                    </div>
+                                    <ul class="info-data flex flex-col gap-3 justify-center">
+                                        <li class="gap-3 flex justify-between flex-row items-center">
+                                            <h3 class="font-normal text-sm text-[#131313]">Country:</h3>
+                                            <span class="opacity-60 text-sm font-normal text-[#131313]">Egypt</span>
+                                        </li>
+                                        <li class="gap-3 flex justify-between flex-row items-center">
+                                            <h3 class="font-normal text-sm text-[#131313]">City:</h3>
+                                            <span class="opacity-60 text-sm font-normal text-[#131313]">Cairo</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-card bg-white flex flex-col gap-6 p-6 rounded-xl">
+                                    <div
+                                        class="info-icon m-auto p-2.5 rounded-full bg-[#F78F42] text-[#131313] items-center min-w-[50px] min-h-[50px] flex justify-center">
+                                        <ion-icon name="mail-outline" class="text-xl"></ion-icon>
+                                    </div>
+                                    <ul class="info-data flex flex-col gap-3 justify-center">
+                                        <li class="gap-3 flex justify-between flex-row items-center">
+                                            <h3 class="font-normal text-sm text-[#131313]">Email:</h3>
+                                            <a href="mailto:nabilfayez59@gmail.com"
+                                                class="opacity-60 text-sm font-normal text-[#131313]">nabilfayez59@gmail.com</a>
+                                        </li>
+                                        <li class="gap-3 flex justify-between flex-row items-center">
+                                            <h3 class="font-normal text-sm text-[#131313]">Whatsapp:</h3>
+                                            <a href="https://wa.me/201206986350" target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="opacity-60 text-sm font-normal text-[#131313]">+20 120 698
+                                                6350</a>
+                                        </li>
+                                        <li class="gap-3 flex justify-between flex-row items-center">
+                                            <h3 class="font-normal text-sm text-[#131313]">Telegram:</h3>
+                                            <a href="https://t.me/im_nabil" target="_blank" rel="noopener noreferrer"
+                                                class="opacity-60 text-sm font-normal text-[#131313]">@im_nabil</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="info-card bg-white flex flex-col gap-6 p-6 rounded-xl">
+                                    <div
+                                        class="info-icon m-auto p-2.5 rounded-full bg-[#F78F42] text-[#131313] items-center min-w-[50px] min-h-[50px] flex justify-center">
+                                        <ion-icon name="phone-portrait-outline" class="text-xl"></ion-icon>
+                                    </div>
+                                    <ul class="info-data flex flex-col gap-3 justify-center">
+                                        <li class="gap-3 flex justify-between flex-row items-center">
+                                            <h3 class="font-normal text-sm text-[#131313]">Phone:</h3>
+                                            <a href="https://wa.me/201206986350" target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="opacity-60 text-sm font-normal text-[#131313]">+20 120 698
+                                                6350</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="flex gap-2.5 flex-row py-5 px-6 rounded-xl bg-white text-center justify-center">
+                    <h2 class="font-normal text-base text-[#131313]">© 2023 Nabil Fayez. All Rights Reserved.</h2>
+                </footer>
             </main>
             <nav
                 class="w-full 2xl:w-[88px] 2xl:h-[95vh] justify-between rounded-full sticky top-8 bg-white 2xl:rounded-xl 2xl:p-5 p-2 gap-5 flex flex-row-reverse items-center 2xl:flex-col ">
@@ -889,45 +1075,52 @@
                             <div class="bg-[#EEEEEE] px-2 py-1 rounded-md hidden 2xl:inline-block">
                                 <span class="text-[#131313] font-medium text-xs">Home</span>
                             </div>
-                            <a href="#projects"
+                            <a href="#home"
                                 class="rounded-lg p-3 gap-2.5 bg-[#F78F42] text-black flex flex-col items-center"
                                 title="Home">
                                 <ion-icon name="home-outline" class="text-2xl"></ion-icon>
                             </a>
                         </li>
                         <li class="flex flex-col gap-1">
-                            <a href="#projects"
+                            <a href="#services"
                                 class="rounded-lg p-3 gap-2.5 opacity-60 text-black flex flex-col items-center"
-                                title="Home">
-                                <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+                                title="Services">
+                                <ion-icon name="construct-outline" class="text-2xl"></ion-icon>
                             </a>
                         </li>
                         <li class="flex flex-col gap-1">
-                            <a href="#projects"
-                                class="rounded-lg p-3 gap-2.5  opacity-60 text-black flex flex-col items-center"
-                                title="Home">
-                                <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+                            <a href="#education"
+                                class="rounded-lg p-3 gap-2.5 opacity-60 text-black flex flex-col items-center"
+                                title="Education">
+                                <ion-icon name="school-outline" class="text-2xl"></ion-icon>
                             </a>
                         </li>
                         <li class="flex flex-col gap-1">
-                            <a href="#projects"
+                            <a href="#experience"
                                 class="rounded-lg p-3 gap-2.5  opacity-60 text-black flex flex-col items-center"
-                                title="Home">
-                                <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+                                title="Experience">
+                                <ion-icon name="briefcase-outline" class="text-2xl"></ion-icon>
                             </a>
                         </li>
                         <li class="flex flex-col gap-1">
-                            <a href="#projects"
+                            <a href="#portfolio"
                                 class="rounded-lg p-3 gap-2.5  opacity-60 text-black flex flex-col items-center"
-                                title="Home">
-                                <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+                                title="Portfolio">
+                                <ion-icon name="folder-open-outline" class="text-2xl"></ion-icon>
                             </a>
                         </li>
                         <li class="flex flex-col gap-1">
-                            <a href="#projects"
+                            <a href="#blogs"
                                 class="rounded-lg p-3 gap-2.5  opacity-60 text-black flex flex-col items-center"
-                                title="Home">
-                                <ion-icon name="home-outline" class="text-2xl"></ion-icon>
+                                title="Blogs">
+                                <ion-icon name="book-outline" class="text-2xl"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="flex flex-col gap-1">
+                            <a href="#contact"
+                                class="rounded-lg p-3 gap-2.5  opacity-60 text-black flex flex-col items-center"
+                                title="Contact">
+                                <ion-icon name="mail-outline" class="text-2xl"></ion-icon>
                             </a>
                         </li>
                     </ul>
